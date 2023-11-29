@@ -23,7 +23,7 @@ export default {
         secondary: "#F5E6E0",
       },
       backgroundImage: {
-        hero: "url('./src/assets/Desktop - 1.svg')",
+        hero: "url('./src/assets/Desktop - 1.png')",
       },
     },
   },

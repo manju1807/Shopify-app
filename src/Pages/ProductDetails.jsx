@@ -2,7 +2,6 @@ import { useContext } from "react";
 import { useParams } from "react-router-dom";
 import { CartContext } from "../Contexts/CartContext";
 import { ProductContext } from "../Contexts/ProductContext";
-import Preloader from "../components/Preloader";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 
@@ -29,7 +28,7 @@ const ProductDetails = () => {
   if (!product) {
     return (
       <section className="h-screen flex justify-center items-center">
-        <Preloader />
+        <h1>loading...</h1>
       </section>
     );
   }

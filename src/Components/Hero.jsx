@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import WomanImg from "../assets/hero.png";
+import HeroBg from "../assets/Herobg.png";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 const Hero = () => {
@@ -13,7 +14,23 @@ const Hero = () => {
   }, [isInView, mainControls]);
   return (
     <section className="relative h-[886px] py-24 z-3">
-      <div className="bg-hero bg-no-repeat bg-cover absolute top-0 left-0 min-h-[100vh] max-w-[100vw] min-w-full z-2"></div>
+      <div className="absolute hidden md:flex top-0 left-0 min-h-[886px] max-w-[100vw] min-w-full z-2">
+        <motion.img
+          variants={{
+            hidden: { opacity: 0 },
+            visible: { opacity: 1 },
+          }}
+          initial="hidden"
+          animate={mainControls}
+          transition={{
+            duration: 0.4,
+            delay: 0.2,
+          }}
+          src={HeroBg}
+          alt=""
+          className="h-full w-[100vw]"
+        />
+      </div>
       <div className="container relative mx-auto flex justify-around h-full px-12 z-3">
         <div className="flex flex-col w-full justify-center md:pl-[6rem] items-start">
           <motion.div

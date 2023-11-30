@@ -20,7 +20,7 @@ const Home = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 1500);
+    }, 2500);
   }, []);
 
   return (
@@ -30,7 +30,7 @@ const Home = () => {
       ) : (
         <>
           <Hero />
-          <section className="py-4">
+          <section className="relative md:mt-[2rem] py-4">
             <div className="container mx-auto">
               <h1 className=" mb-6 text-center uppercase text-xl font-semibold">
                 Trending Products

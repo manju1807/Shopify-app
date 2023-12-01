@@ -62,10 +62,10 @@ const Hero = () => {
             </Link>
           </motion.div>
         </div>
-        <div className="hidden h-full w-full md:flex md:justify-end md:items-end ">
+        <div className="hidden h-full w-full md:flex md:justify-end md:items-end md:relative">
           <motion.img
             src={WomanImg}
-            className="h-[800px]"
+            className="h-[900px] relative md:top-[5.9rem] md:-left-[2rem]"
             alt=""
             variants={{
               hidden: { opacity: 0, y: 100 },
